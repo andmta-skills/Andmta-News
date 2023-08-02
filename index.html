@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=REM:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="news">
+      <div class="news__header">
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#business"
+                    >Business</a
+                  >
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#sports">Sports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#technology">Technology</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#entertainment">Entertainment</a>
+                </li>
+              </ul>
+              <div></div>
+              <form class="d-flex "  class="search__form" id="search__form" action="">
+                <input
+             
+                  type="text"
+                  placeholder="Search"     
+                  name="searchnews"
+                  id="searchnews"
+                />
+                <input class="mx-2" type="submit" value="Find News" />
+              </input>
+              </form>
+              
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+      <div class="news__content container">
+       <div class="search__results d-none">
+         <div class="news__content__single__category__wrapper " > 
+          <div class="news__content__single__category mt-5">
+            <div class="news__content__category__title search__results__title">Search Results For </div>
+            <div class="scrollers d-flex justify-content-between container">
+              <div class="left__icon fs-2" onclick="ScrollLeft(this)">
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+              <div class="right__icon fs-2" onclick="ScrollRight(this)">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+            </div>
+            <div
+              class="news__content__item news__content__search__results d-flex mx-5"
+            >
+              <!-- <div class="news__content__single col-12 col-lg-3 mb-5 px-2">
+                <a href="" target="_blank" class="news__content__single__button">
+                  <div class="news__content__single__top">
+                    <div
+                      class="news__content__single__Image"
+                      style="
+                        background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/230731105031-san-francisco-investigates-twitter-x-sign.jpg?c=16x9&q=w_800,c_fill');
+                      "
+                    >
+                      <div class="news__content__single__content flex-column">
+                        <p class="description">
+                          (Bloomberg) -- Equities in Asia rose Monday following
+                          a rally on Wall Street as investors embraced fresh
+                          signs that inflation is easing further. Chinese stock
+                          gauges led gains on expectations of more… [+6476
+                          chars]
+                        </p>
+                        <p>Read More</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-2">
+                    <div class="news__content__single__date pe-2 d-flex flex-column align-items-center">
+                      <div class="month">JAN</div>
+                      <div class="date">07</div>
+                      <div class="year">2023</div>
+                    </div>
+                    <div class="news__content__single__title fw-bold">
+                      <p>
+                        Asian Stocks Echo US Rally on Soft Landing Hopes:
+                        Markets Wrap - Yahoo Finance
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="news__content__single__category__wrapper" id="business">
+          <div class="news__content__single__category mt-5">
+            <div class="news__content__category__title">Business</div>
+            <div class="scrollers d-flex justify-content-between container">
+              <div class="left__icon fs-2" onclick="ScrollLeft(this)">
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+              <div class="right__icon fs-2" onclick="ScrollRight(this)">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+            </div>
+            <div
+              class="news__content__item news__content__business d-flex mx-5"
+            >
+              <!-- <div class="news__content__single col-12 col-lg-3 mb-5 px-2">
+                <a href="" target="_blank" class="news__content__single__button">
+                  <div class="news__content__single__top">
+                    <div
+                      class="news__content__single__Image"
+                      style="
+                        background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/230731105031-san-francisco-investigates-twitter-x-sign.jpg?c=16x9&q=w_800,c_fill');
+                      "
+                    >
+                      <div class="news__content__single__content flex-column">
+                        <p class="description">
+                          (Bloomberg) -- Equities in Asia rose Monday following
+                          a rally on Wall Street as investors embraced fresh
+                          signs that inflation is easing further. Chinese stock
+                          gauges led gains on expectations of more… [+6476
+                          chars]
+                        </p>
+                        <p>Read More</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-2">
+                    <div class="news__content__single__date pe-2 d-flex flex-column align-items-center">
+                      <div class="month">JAN</div>
+                      <div class="date">07</div>
+                      <div class="year">2023</div>
+                    </div>
+                    <div class="news__content__single__title fw-bold">
+                      <p>
+                        Asian Stocks Echo US Rally on Soft Landing Hopes:
+                        Markets Wrap - Yahoo Finance
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="news__content__single__category__wrapper" id="sports">
+          <div class="news__content__single__category">
+            <div class="news__content__category__title">Sports</div>
+            <div class="scrollers d-flex justify-content-between container">
+              <div class="left__icon fs-2" onclick="ScrollLeft(this)">
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+              <div class="right__icon fs-2" onclick="ScrollRight(this)">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+            </div>
+            <div
+              class="news__content__item news__content__sports d-flex mx-5"
+            ></div>
+          </div>
+        </div>
+        <div class="news__content__single__category__wrapper" id="technology">
+          <div class="news__content__single__category">
+            <div class="news__content__category__title">Technology</div>
+            <div class="scrollers d-flex justify-content-between container">
+              <div class="left__icon fs-2" onclick="ScrollLeft(this)">
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+              <div class="right__icon fs-2" onclick="ScrollRight(this)">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+            </div>
+            <div
+              class="news__content__item news__content__technology d-flex mx-5"
+            ></div>
+          </div>
+        </div>
+        <div
+          class="news__content__single__category__wrapper"
+          id="entertainment"
+        >
+          <div class="news__content__single__category">
+            <div class="news__content__category__title">Entertainment</div>
+            <div class="scrollers d-flex justify-content-between container">
+              <div class="left__icon fs-2" onclick="ScrollLeft(this)">
+                <i class="fa-solid fa-angle-left"></i>
+              </div>
+              <div class="right__icon fs-2" onclick="ScrollRight(this)">
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+            </div>
+            <div
+              class="news__content__item news__content__entertainment d-flex mx-5"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="news__footer">
+        Designed and Developed by Tilahun Feyissa
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+:root{
+    --primary:black;
+    --secondary:orange;
+    --light:white;
+}
+body{
+    font-family: 'REM', sans-serif;
+}
+.news__header{
+    padding: 1rem;
+}
+.news__header__items div{
+margin-right: 2rem;
+}
+.news__content__single__category__wrapper{
+    padding-top: 5rem;
+}
+.news__content__single__category{
+    border-top: 5px solid var(--secondary);
+    /* border-bottom: 1px solid var(--secondary); */
+}
+.news__content__category__title{
+    border: 5px solid var(--secondary);
+    display: block;
+    width: fit-content;
+    padding: 3px 15px;
+    position: relative;
+    top:-1.5rem;
+    background-color: var(--secondary);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.news__content__item{
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+
+}
+::-webkit-scrollbar{
+    display: none;
+  }
+.news__content__single__Image {
+
+   background-image: url('https://rutecprojekt.de/assets/images/2/News_AdobeStock_116225048_neu-de28855b.jpg');
+    background-position: center;
+    background-size:cover;
+    height: 0;
+    padding-bottom: 60%;
+    width:100%;
+    align-items: flex-end;
+
+}
+.news__content__single__top{
+display: flex;
+align-items: flex-end;
+}
+.news__content__single__Image:hover .news__content__single__content{
+    opacity: 0.8;
+}
+.news__content__single__content{
+    background-image: linear-gradient(to bottom, var(--primary),var(--primary), rgba(255,255,255,0));
+    /* padding-bottom: 30%; */
+
+  
+
+opacity: 0;
+display: flex;
+color:var(--light);
+
+justify-content: flex-end;
+transition: 0.2s ease-in-out;
+
+
+}
+.news__content__single__content p{
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+   
+    padding: 2%;
+}
+.news__content__single__content .description{
+
+  
+    padding: 2%;
+    margin-bottom: 0;
+    text-decoration: none;
+    
+    
+
+position: relative;
+    
+    overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; 
+        line-clamp: 4; 
+        -webkit-box-orient: vertical;
+        font-size: 0.8rem;
+}
+.news__content__single__title p{
+    padding:0 ;
+   margin: 0;
+   font-size: 0.8rem;
+   
+    overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; 
+        line-clamp: 3; 
+        -webkit-box-orient: vertical;
+}
+.news__content__single__title{
+    border-left: solid 2px var(--primary);
+    padding:0  0.4rem;
+    display: flex;
+    align-items: center;
+
+}
+.month, .date, .year{
+    font-size: 0.8rem;
+}
+.scrollers{
+    position: absolute;
+ 
+}
+.scrollers div{
+    position: relative;
+    height:100%;
+    top:4rem;
+    width:50px;
+    height:50px;
+    border-radius: 25px;
+    background-color: var(--light);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0.6;
+    
+}
+.right__icon{
+    margin-right: 20px;
+}
+.news__content__single__button{
+    text-decoration: none;
+    color: var(--primary);
+
+}
+.news__footer{
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 1rem;
+    text-align: center;
+    margin-top: 50vh;
+}
